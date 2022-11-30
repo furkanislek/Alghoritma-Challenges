@@ -23,3 +23,5 @@ var containsDuplicate = function(nums) {
    }	
    return false;
 };
+
+console.log("Hello");

@@ -1,0 +1,12 @@
+{
+  "name": "container-width-most-water",
+  "version": "1.0.0",
+  "description": "",
+  "main": "container-most-water.js",
+  "scripts": {
+    "start": "node container-most-water.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
