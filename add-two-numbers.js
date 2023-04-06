@@ -16,49 +16,74 @@ Output: [8,9,9,9,0,0,0,1]
 
 */
 
-var addTwoNumbers = function(l1, l2) {
-    var rev1 = l1.reverse();
-    var rev2 = l2.reverse();
+var addTwoNumbers = (l1, l2) => {
+  var rev1 = l1.reverse();
+  var rev2 = l2.reverse();
+  console.log(rev1, rev2);
 
-    console.log(rev1);
-    console.log(rev2);
+  var str1 = "";
+  var str2 = "";
 
-    var str1 = "";
-    var str2 = "";
-    rev1.forEach((e) => {
-       str1 += e.toString()
-    })
-    rev2.forEach((e) => {
-       str2 += e.toString()
-    })
+  rev1.forEach((element) => {
+    str1 += element.toString();
+  });
 
-    console.log(str1);
-    console.log(str2);
+  rev2.forEach((element) => {
+    str2 += element.toString();
+  });
 
+  console.log(str1);
+  console.log(str2);
+
+  let sum = +str1 + Number(str2);
+  console.log(sum);
+
+  const result = sum
+    .toString()
+    .split("")
+    .map((element) => +element);
     
-    console.log(typeof Number(str1))
+  return result.reverse();
+};
 
-    var num1 = Number(str1);
-    var num2 = Number(str2);
+console.log(addTwoNumbers([2, 4, 3], [5, 6, 4]));
 
-    var sum = num1 + num2;
+// var addTwoNumbers = function(l1, l2) {
+//     var rev1 = l1.reverse();
+//     var rev2 = l2.reverse();
 
-    console.log(typeof sum);
-    var sumRev = sum.toString()
-    console.log(typeof sumRev);
+//     console.log(rev1);
+//     console.log(rev2);
 
-    var res = sumRev.split("").map((num)=>{
-        return Number(num)
-      });
+//     var str1 = "";
+//     var str2 = "";
+//     rev1.forEach((e) => {
+//        str1 += e.toString()
+//     })
+//     rev2.forEach((e) => {
+//        str2 += e.toString()
+//     })
 
-    var result = res.reverse();
-    
-    return result;
+//     console.log(str1);
+//     console.log(str2);
 
- };
+//     console.log(typeof Number(str1))
 
- console.log(addTwoNumbers([2,4,3], [5,6,4]));
- console.log(addTwoNumbers([9,9,9,9,9,9,9], [9,9,9,9]));
- console.log(addTwoNumbers([0], [0]));
- console.log(addTwoNumbers([9], [9]));
- 
+//     var num1 = Number(str1);
+//     var num2 = Number(str2);
+
+//     var sum = num1 + num2;
+
+//     console.log(typeof sum);
+//     var sumRev = sum.toString()
+//     console.log(typeof sumRev);
+
+//     var res = sumRev.split("").map((num)=>{
+//         return Number(num)
+//       });
+
+//     var result = res.reverse();
+
+//     return result;
+
+//  };

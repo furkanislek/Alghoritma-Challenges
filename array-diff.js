@@ -11,3 +11,5 @@ function arrayDiff(a, b) {
   var arrays = a.filter((e) => !b.includes(e));
   return arrays;
 }
+
+console.log(arrayDiff([1,2,2,2,4,3,5,6], [2,3,6]));

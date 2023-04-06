@@ -11,11 +11,15 @@ Example 1:
 Input: nums = [1,2,0]
 Output: 3
 Explanation: The numbers in the range [1,2] are all in the array.
+
+
 Example 2:
 
 Input: nums = [3,4,-1,1]
 Output: 2
 Explanation: 1 is in the array but 2 is missing.
+
+
 Example 3:
 
 Input: nums = [7,8,9,11,12]
@@ -24,20 +28,36 @@ Explanation: The smallest positive integer 1 is missing.
 
 */
 
-var firstMissingPositive = function (nums) {
-  var nums = nums.sort((a, b) => a - b);
-  var first = 1;
-  nums.forEach((element) => {
-    if (first == element) {
-      first++;
+const firstMissingPositive = (numsArray) => {
+  var siralanmisNumaralar = numsArray.sort((a, b) => a - b);
+  var ilkDeger = 1;
+
+  siralanmisNumaralar.forEach((element) => {
+    if (ilkDeger === element) {
+      ilkDeger++;
+    } else {
+      return element;
     }
   });
 
-  return first;
+  return ilkDeger;
 };
 
-console.log(
-  firstMissingPositive([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 23, 20])
-);
+console.log(firstMissingPositive([-5, 19, 8, 7, 3, 6, 4, 5, 1, 2]));
+console.log(firstMissingPositive([-5, 19, 2,3,4,5,6,7]));
 
-console.log(firstMissingPositive([3, 4, -1, 1]));
+// var firstMissingPositive = function (nums) {
+//   var nums = nums.sort((a, b) => a - b);
+//   var first = 1;
+//   nums.forEach((element) => {
+//     if (first == element) {
+//       first++;
+//     }
+//   });
+
+//   return first;
+// };
+
+// console.log(firstMissingPositive([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 23, 20]));
+
+// console.log(firstMissingPositive([3, 4, -1, 1]));

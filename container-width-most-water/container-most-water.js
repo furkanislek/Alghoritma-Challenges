@@ -37,3 +37,4 @@ var maxArea = function(height) {
 };
 
 console.log(maxArea([6, 3, 1, 4, 12, 4]));
+

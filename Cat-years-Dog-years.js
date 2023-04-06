@@ -24,7 +24,7 @@ const humanYearsCatYearsDogYears = (humanYears) => {
     
     for (let i = 1; i <= humanYears; i++) {
       if (i === 1) {
-        catYears += 15;
+        catYears = catYears + 15;
         dogYears += 15;
       }
       else if (i === 2) {
